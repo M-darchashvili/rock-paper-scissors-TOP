@@ -35,3 +35,11 @@ function rounds(computer, player) {
       return 'Player wins wins';
   }
 }
+
+//Prompt for the player to submit their pick
+function game() {
+  for (let i = 0; i < 5; i++) {
+     const player = prompt('Rock, Paper, Or Scissors?').trim().toLowerCase()
+     const computer = getComputerChoice()
+     console.log(rounds(computer, player))
+  }
