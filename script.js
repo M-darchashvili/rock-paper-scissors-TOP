@@ -36,10 +36,22 @@ function rounds(computer, player) {
   }
 }
 
-//Prompt for the player to submit their pick
+
 function game() {
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 5; i++) { //scoring 
      const player = prompt('Rock, Paper, Or Scissors?').trim().toLowerCase()
      const computer = getComputerChoice()
      console.log(rounds(computer, player))
   }
+
+      //Winning and losing message output
+  if (computerScore > playerScore) {
+    return 'The Computer beat you'
+  } else if (computerScore < playerScore) {
+    return 'You beat the computer'
+  } else {
+    return 'You and computer Tied'
+  }
+
+  }
+console.log(game());
