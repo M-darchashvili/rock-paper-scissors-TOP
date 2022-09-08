@@ -44,7 +44,26 @@ function rounds(computer, player) {
   }
 }
 
-function game() {
+//event listeners
+rockIcon.addEventListener('click', () => {
+  const computer = getComputerChoice();
+  const player = "rock"
+  rounds(computer, player);
+})
+
+paperIcon.addEventListener('click', () => {
+  const computer = getComputerChoice();
+  const player = "paper"
+  rounds(computer, player);
+})
+
+scissorsIcon.addEventListener('click', () => {
+  const computer = getComputerChoice();
+  const player = "scissors"
+  rounds(computer, player);
+})
+
+/*function game() {
   for (let i = 0; i < 5; i++) { //scoring 
      const player = prompt('Rock, Paper, Or Scissors?').trim().toLowerCase()
      const computer = getComputerChoice()
@@ -62,4 +81,4 @@ function game() {
 
   }
 console.log(game());
-
+*/
