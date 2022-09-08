@@ -26,14 +26,14 @@ function rounds (computer, player) {
     || (computer === 'paper' && computer === 'rock') 
     || (computer === 'scissors' && player === 'paper')) {
     computerCount.innerText = ++computerScore
-    result.innerText = 'computer'
+    result.innerText = 'computer wins'
   } else if ((computer === 'rock' && player === 'paper') 
     || (computer === 'paper' && player === "scissors") 
     || (computer === 'scissors' && player === 'rock')){
     playerCount.innerText = ++playerScore
-    result.innerText = 'player'
+    result.innerText = 'player wins'
   }
-
+checkingWinner();
 }
 
 //Message output at the end of the game;
