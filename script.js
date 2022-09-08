@@ -18,30 +18,22 @@ function getComputerChoice() {
     return computer
 } 
 
-// The game rules
-function rounds(computer, player) {
+// The gameplay
+function rounds (computer, player) {
   if (computer === player) {
-      return 'Tie';
-      
-  } else if (computer === 'rock' && player === 'scissors') {
-      computerScore++
-      return 'Computer wins';
-  } else if (computer === 'rock' && player === 'paper') {
-      playerScore++
-      return 'Player wins';
-  } else if (computer === 'paper' && player === 'scissors') {
-      ComputerScore++
-      return 'Player wins';
-  } else if (computer === 'paper' && player === 'rock') {
-      playerScore++
-      return 'Player wins';
-  } else if (computer === 'scissors' && player === 'paper') {
-      computerScore++
-      return 'Computer wins';
-  } else if (computer === 'scissors' && player === 'rock') {
-      PlayerScore++
-      return 'Player wins wins';
+    result.innerText = 'draw'
+  } else if ((computer === 'rock' && player === 'scissors')
+    || (computer === 'paper' && computer === 'rock') 
+    || (computer === 'scissors' && player === 'paper')) {
+    computerCount.innerText = ++computerScore
+    result.innerText = 'computer'
+  } else if ((computer === 'rock' && player === 'paper') 
+    || (computer === 'paper' && player === "scissors") 
+    || (computer === 'scissors' && player === 'rock')){
+    playerCount.innerText = ++playerScore
+    result.innerText = 'player'
   }
+
 }
 
 //Message output at the end of the game;
@@ -71,5 +63,3 @@ scissorsIcon.addEventListener('click', () => {
   const player = "scissors"
   rounds(computer, player);
 })
-
-
