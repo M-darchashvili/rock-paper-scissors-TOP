@@ -1,5 +1,14 @@
 let computerScore = playerScore = 0
 
+//selecting elements 
+const rockIcon = document.querySelector("#rock");
+const paperIcon = document.querySelector("#paper");
+const scissorsIcon  = document.querySelector("#scissors");
+const result = document.querySelector(".result");
+const playerCount= document.querySelector("#player-score");
+const computerCount = document.querySelector("#computer-score");
+const scoreBoard = document.querySelector(".score-board");
+
 //Function for the computer to randomly pick its play
 function getComputerChoice() {
     const rps = ['rock', 'paper', 'scissors']
@@ -8,7 +17,6 @@ function getComputerChoice() {
 
     return computer
 } 
-
 
 // The game rules
 function rounds(computer, player) {
@@ -36,7 +44,6 @@ function rounds(computer, player) {
   }
 }
 
-
 function game() {
   for (let i = 0; i < 5; i++) { //scoring 
      const player = prompt('Rock, Paper, Or Scissors?').trim().toLowerCase()
@@ -55,3 +62,4 @@ function game() {
 
   }
 console.log(game());
+
